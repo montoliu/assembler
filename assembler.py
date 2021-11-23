@@ -245,7 +245,7 @@ def delete_spaces_and_empty_lines(asm_code):
     new_asm_code = []
     for line in asm_code:
         new_line = line.replace(" ", "")
-        new_line2 = line.replace("\t", "")
+        new_line2 = new_line.replace("\t", "")
         if len(new_line2) > 0:
             new_asm_code.append(new_line2)
     return new_asm_code
@@ -333,6 +333,7 @@ def deal_with_variables(asm_code):
             new_asm_code.append(line[:])
 
     return new_asm_code
+
 
 # ----------------------------------------
 # 1. Delete all spaces and empty lines
